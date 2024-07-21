@@ -2,14 +2,14 @@
 using namespace std;
 #define ll long long 
 #define MAXN 105
-int k,x,a;
+ll k,x,a;
 int t;
 
 void solve() {
 	cin>>k>>x>>a;
-	int temp=a; //之前本金 
-	int sum=0;//之前付过的钱，之前轮数都亏 
-	int now;//本轮打算放的钱 
+	ll temp=a; //之前本金 
+	ll sum=0;//之前付过的钱，之前轮数都亏 
+	ll now;//本轮打算放的钱 
 	for(int i=1; i<=x+1; i++) {
 		if(i==x+1) now=a; // all in
 		else now=sum/(k-1)+1; //sum+now<now*k now>sum/(k-1) 每次保证如果我赢的话，都不会亏，这样对方会让我输 
